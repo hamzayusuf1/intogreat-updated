@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { Mail, Phone, Home, Sofa, Heart } from "lucide-react";
+import VideoEmbed from "@/components/VideoEmbed";
 
 export const metadata: Metadata = {
   title: "Supported Accommodation",
@@ -145,8 +146,26 @@ export default function SupportedAccommodationPage() {
         </div>
       </section>
 
-      {/* Referrals */}
+      {/* Real impact video */}
       <section className="py-20 md:py-28 bg-white">
+        <div className="max-w-5xl mx-auto px-5">
+          <div className="text-center mb-10 md:mb-12">
+            <span className="font-display text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-periwinkle-deep">
+              Real impact
+            </span>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-charcoal mt-3 leading-[1.05]">
+              See the work in action.
+            </h2>
+            <p className="text-grey-text leading-relaxed mt-4 max-w-xl mx-auto">
+              A short look at the support we provide and the homes we run.
+            </p>
+          </div>
+          <VideoEmbed videoId="mHcZvge2Szw" title="Intogreat Housing support work" />
+        </div>
+      </section>
+
+      {/* Referrals */}
+      <section className="py-20 md:py-28 bg-grey-cream">
         <div className="max-w-7xl mx-auto px-5">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             <div className="lg:col-span-5">
@@ -177,7 +196,7 @@ export default function SupportedAccommodationPage() {
       </section>
 
       {/* Contact */}
-      <section className="py-20 md:py-28 bg-grey-cream">
+      <section className="py-20 md:py-28 bg-white border-t border-grey-mid">
         <div className="max-w-3xl mx-auto px-5 text-center">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-charcoal mb-5 leading-[1.05]">
             Make a referral or ask a question.
